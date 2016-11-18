@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html lang="portuguese">
+<head>
+    <meta charset="UTF-8">
+    <title>steampunk</title>
+	<link rel="stylesheet" type="text/css" href="css/avatar.css">
+    <script src="js/jquery-1.12.3.js"></script>
+    
+    <script>//portfolio
+        var maxImg = 13;
+        var imgAtual = 1;
+        var imgUrl = "url(portfolio/" + imgAtual + ".png)";
+        
+        $(document).ready(function(){
+            
+            $('.previous').css("background-image", "url(portfolio/" + (imgAtual - 1) + ".png)");
+            $('.previous').css("cursor", "default");
+            $('.previous').css("opacity", "0");
+            $('.next').css("background-image", "url(portfolio/" + (imgAtual + 1) + ".png)");
+            
+            for(var x = imgAtual; x <= maxImg; x++){
+                var imgId = "#" + x;
+                $('.drawings').append("<div class='draw' id='" + x + "'></div>" );
+                $(imgId).css("background-image", "url(portfolio/" + x + ".png)");
+            }
+            
+            $(".next").click(function(){
+                var dist = $('.slide').height() + "px";
+                if(imgAtual < maxImg){
+                    imgAtual += 1;
+                    $('.previous').css("cursor", "pointer");
+                    $('.previous').css("opacity", "1");
+                    $('.next').css("cursor", "pointer");
+                    $('.next').css("opacity", "1");
+                }
+                if(imgAtual == maxImg){
+                    $('.next').css("cursor", "default");
+                    $('.next').css("opacity", "0");
+                }
+                $('.previous').css("background-image", "url(portfolio/" + (imgAtual - 1) + ".png)");
+                $('.next').css("background-image", "url(portfolio/" + (imgAtual + 1) + ".png)");
+                $(".drawings").animate({
+                    scrollTop: "+=" + dist
+                }, 1000);
+            });
+            
+            $(".previous").click(function(){
+                var dist = $('.slide').height() + "px";
+                if(imgAtual > 1){
+                    imgAtual -= 1;
+                    $('.previous').css("cursor", "pointer");
+                    $('.previous').css("opacity", "1");
+                    $('.next').css("cursor", "pointer");
+                    $('.next').css("opacity", "1");
+                }
+                if(imgAtual == 1){
+                    $('.previous').css("cursor", "default");
+                    $('.previous').css("opacity", "0");
+                }
+                $('.previous').css("background-image", "url(portfolio/" + (imgAtual - 1) + ".png)");
+                $('.next').css("background-image", "url(portfolio/" + (imgAtual + 1) + ".png)");
+                $(".drawings").animate({
+                    scrollTop: "-=" + dist
+                }, 1000);
+            });
+        });
+    </script>
+</head>
+    
+<body>
+    <div id="avatar">
+        <div class="cabeca"></div>
+        <div class="cabecaSombra"></div>
+        <div class="buraco"></div>
+        <div class="cabeca_topo"></div>
+        <div class="oculos"></div>
+        <div class="olho esquerdo"></div>
+        <div class="olho direito"></div>
+        <div class="boca"></div>
+        <div class="orelha"></div>
+        <div class="sobrancelha esquerda"></div>
+        <div class="sobrancelha direita"></div>
+        <div class="nariz"></div>
+        <div class="pescoco"></div>
+        <div class="camisa"></div>
+        <div class="camisaManga"></div>
+        <div class="calca"></div>
+        <div class="perna esq"></div>
+        <div class="perna dir"></div>
+        <div class="pe sqrd"></div>
+        <div class="pe drt"></div>
+        <div class="bracos"></div>
+        <div class="maos"></div>
+    </div>
+    <div class="box"></div>
+    <div class="content">
+        <div class="title"></div>
+        <div class="slide">
+            <div class="previous"></div>
+            <div class="drawings"></div>
+            <div class="next"></div>
+        </div>
+    </div>
+</body>
+</html>
