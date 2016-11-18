@@ -758,7 +758,7 @@ body{
     z-index: 13;
 }
 .camisaManga{
-    width: 70px;
+    width: 72px;
     height: 30px;
     background-color: #000;
     position: fixed;
@@ -952,6 +952,32 @@ body{
         box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, .5);
     }
 }
+@keyframes abrirBox {
+    0% {
+        width: 10px;
+        height: 10px;
+        left: 70px;
+        top: 120px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 0px 0px #000;
+    }
+    5% {
+        width: 10px;
+        height: 10px;
+        left: 70px;
+        top: 120px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 0px 0px #000;
+    }
+    100% {
+        width: calc(100vw - 175px);
+        height: calc(100vh - 50px);
+        left: 150px;
+        top: 25px;
+        border-radius: 0px;
+        box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, .5);
+    }
+}
 .content{
     width: calc(100vw - 175px);
     height: calc(100vh - 50px);
@@ -966,8 +992,9 @@ body{
     -webkit-animation: mostrarContent .5s ease 5s 1 alternate;
     animation: mostrarContent .5s ease 5s 1 alternate;
     animation-fill-mode: forwards;
-    overflow-y: hidden;
+    overflow-y: scroll;
     overflow-x: hidden;
+    box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, .5);
 }
 -o-@keyframes mostrarContent {
     0% {
@@ -1010,38 +1037,22 @@ body{
 .title{
     width: 100%;
     height: 90px;
-    background-color: transparent;
-    box-shadow: 0px 0px 40px 0px #000, 0px 0px 30px 0px #000, 0px 0px 20px 0px #000;
-    border-bottom-left-radius: 30% 5px;
-    border-bottom-right-radius: 30% 5px;
-}
-.title:after{
-    width: 100%;
-    height: 100px;
-    content: "Emerson Yalli";
+    background-color: #39404A;
     color: #fff;
     font-size: 50px;
     font-family: sketchy;
     padding-left: 25px;
     padding-top: 15px;
-    position: absolute;
-    top: 0px;
-    background-color: transparent;
-    background-image: linear-gradient(#39404A 0%, #39404A 100%), linear-gradient(135deg, #39404A 50%, transparent 50%), linear-gradient(225deg, #39404A 50%, transparent 50%), linear-gradient(135deg, #000 50%, transparent 50%), linear-gradient(225deg, #000 50%, transparent 50%);
-    background-size: 15px 85px, 15px 15px, 15px 15px, 15px 15px, 15px 15px;
-    background-position: 0px 0px, 0px 81px, 0px 81px, 0px 85px, 0px 85px;
-    background-repeat: repeat-x;
+    cursor: default;
 }
 .slide{
-    width: 80%;
+    width: 100%;
     height: calc(100% - 180px);
     background-color: #fff;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    margin-left: 10%;
     margin-top: 50px;
-    box-shadow: 0px 0px 0px 4px #000, 44px 0px 0px 0px #fff, 40px 0px 0px 4px #000, -34px 0px 0px 0px #fff, -30px 0px 0px 4px #000, 0px 14px 0px 0px #fff, 0px 10px 0px 4px #000, 0px -24px 0px 0px #fff, 0px -20px 0px 4px #000;
     display: inline-block;
 }
 .previous{
@@ -1065,7 +1076,7 @@ body{
     background-size: auto 170%;
 }
 .previous:after {
-	right: 80%;
+	right: 90%;
 	top: calc(50% + 40px);
 	border: solid transparent;
 	content: " ";
@@ -1116,7 +1127,7 @@ body{
     background-size: auto 170%;
 }
 .next:after {
-	left: 80%;
+	left: 90%;
 	top: calc(50% + 40px);
 	border: solid transparent;
 	content: " ";
@@ -1128,4 +1139,27 @@ body{
 	border-left-color: #000;
 	border-width: 80px;
 	margin-top: -80px;
+}
+.sobre{
+    width: 80%;
+    height: 300px;
+    background-color: transparent;
+    color: #000;
+    position: relative;
+    left: 10%;
+    top: 100px;
+}
+.sobre:after{
+    width: 60%;
+    height: 60px;
+    content: "Quem djabos sou eu?";
+    background-color: #39404A;
+    color: #fff;
+    font-size: 50px;
+    font-family: sketchy;
+    position: absolute;
+    left: -10%;
+    top: -50px;
+    padding-left: 15px;
+    border-radius: 5px;
 }
