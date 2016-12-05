@@ -1,9 +1,18 @@
 @charset "utf-8";
 * {margin: 0px;padding: 0px;}
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
 body{
     width: 100vw;
     height: 100vh;
-    background-image: linear-gradient(#FF913B 20%, #961111 80%);
+    background-color: #FF913B;
+    background-image: linear-gradient(transparent 20%, rgba(150, 17, 17, .8) 80%), linear-gradient(30deg, #CC742F 12%, transparent 12.5%, transparent 87%, #CC742F 87.5%, #CC742F), linear-gradient(150deg, #CC742F 12%, transparent 12.5%, transparent 87%, #CC742F 87.5%, #CC742F), linear-gradient(30deg, #CC742F 12%, transparent 12.5%, transparent 87%, #CC742F 87.5%, #CC742F), linear-gradient(150deg, #CC742F 12%, transparent 12.5%, transparent 87%, #CC742F 87.5%, #CC742F), linear-gradient(60deg, #FFA762 25%, transparent 25.5%, transparent 75%, #FFA762 75%, #FFA762), 
+linear-gradient(60deg, #FFA762 25%, transparent 25.5%, transparent 75%, #FFA762 75%, #FFA762);
+    background-size: 100% 100%, 80px 140px, 80px 140px, 80px 140px, 80px 140px, 80px 140px, 80px 140px;
+    background-position: 0 0, 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
 }
 .cabeca{
     width: 100px;
@@ -714,7 +723,7 @@ body{
     height: 25px;
     background-color: transparent;
     background-image: radial-gradient(#000 70%, transparent 40%), radial-gradient(#A58155 70%, transparent 40%), radial-gradient(#846544 70%, transparent 40%), radial-gradient(#A58155 70%, transparent 40%), radial-gradient(#846544 70%, transparent 40%);
-    background-size: 7% 10%, 70%, 70%, 85% 30%, 100% 30%;
+    background-size: 7% 10%, 70% 70%, 70% 70%, 85% 30%, 100% 30%;
     background-position: 1px 7px, 50% -0.5px, 50% 2px, 50% 5px, 50% 6px;
     background-repeat: no-repeat;
     position: fixed;
@@ -727,7 +736,7 @@ body{
     height: 15px;
     background-color: #423222;
     position: fixed;
-    left: 52px;
+    left: 55px;
     top: 235px;
     border-bottom-left-radius: 50% 100%;
     border-bottom-right-radius: 50% 100%;
@@ -741,11 +750,11 @@ body{
     height: 60px;
     background-color: #fff;
     background-image: radial-gradient(#fff 40%, transparent 10%), radial-gradient(#fff 40%, transparent 10%), linear-gradient(165deg, rgba(0, 0, 0, 1) 5%, transparent 50%), radial-gradient(#990000 40%, transparent 10%), linear-gradient(90deg, #990000 15%, transparent 15%, transparent 25%, #990000 25%, #990000 45%, transparent 45%, transparent 55%, #990000 55%, #990000 75%, transparent 75%, transparent 85%, #990000 85%);
-    background-size: 35%, 35%, 100%, 100%, 40% 50%;
+    background-size: 35% 35%, 35% 35%, 100%, 100%, 40% 50%;
     background-position: 30% 55%, 70% 55%, 50%, 50%, 50% 90%;
     background-repeat: no-repeat;
     position: fixed;
-    left: 44px;
+    left: 46px;
     top: 235px;
     border-top-left-radius: 25% 20%;
     border-top-right-radius: 25% 20%;
@@ -777,9 +786,9 @@ body{
     background-image: linear-gradient(rgba(0, 0, 0, .7) 10%, transparent 80%), linear-gradient(transparent 92%, #000 92%);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%, 60% 100%;
+    background-size: 100% 100%, 60% 100%;
     position: fixed;
-    left: 44px;
+    left: 46px;
     top: 290px;
     border-color: #000;
     border-style: solid;
@@ -798,10 +807,10 @@ body{
     z-index: 1;
 }
 .esq{
-    left: 44px;
+    left: 46px;
 }
 .dir{
-    left: 74px;
+    left: 76px;
     background-image: linear-gradient(105deg, rgba(0, 0, 0, .7) 0%, transparent 50%);
 }
 .pe{
@@ -819,10 +828,10 @@ body{
     z-index: 13;
 }
 .sqrd{
-    left: 37px;
+    left: 39px;
 }
 .drt{
-    left: 71px;
+    left: 73px;
     transform: rotateY(180deg);
 }
 .bracos{
@@ -831,7 +840,7 @@ body{
     background-color: #A58155;
     background-image: linear-gradient(transparent 80%, #000 80%), linear-gradient(90deg, transparent 50%, #423222 50%);
     position: fixed;
-    left: 35.5px;
+    left: 37.5px;
     top: 260px;
     border-color: #000;
     border-style: solid;
@@ -844,8 +853,8 @@ body{
     background-color: #A58155;
     background-image: linear-gradient(90deg, transparent 50%, #423222 50%);
     position: fixed;
-    left: 33px;
-    top: 293px;
+    left: 35px;
+    top: 290px;
     border-top-left-radius: 6% 40%;
     border-top-right-radius: 6% 40%;
     border-bottom-left-radius: 20% 60%;
@@ -854,6 +863,12 @@ body{
     border-style: solid;
     border-width: 2px;
     z-index: 10;
+}
+#avatar{
+    -o-filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, .7));
+    -moz-filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, .7));
+    -webkit-filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, .7));
+    filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, .7));
 }
 .box{
     width: 0px;
@@ -1038,6 +1053,8 @@ body{
     width: 100%;
     height: 90px;
     background-color: #39404A;
+    background-image: linear-gradient(360deg, transparent 0% ,rgba(0, 0, 0, .7) 100%), linear-gradient(45deg, #24282F 12%, transparent 0, transparent 88%, #24282F 0), linear-gradient(135deg, transparent 37%, #2D333B 0, #2D333B 63%, transparent 0), linear-gradient(45deg, transparent 37%, #24282F 0, #24282F 63%, transparent 0);
+    background-size: 100% 100%, 20px 20px, 20px 20px, 20px 20px;
     color: #fff;
     font-size: 50px;
     font-family: sketchy;
@@ -1055,6 +1072,10 @@ body{
     margin-top: 50px;
     display: inline-block;
 }
+@font-face{
+    font-family: 'boris';
+    src: url('../fontes/DK Boris Brush.ttf') format('truetype');
+}
 .previous{
     width: 20%;
     height: 100%;
@@ -1062,6 +1083,12 @@ body{
     background-size: auto 150%;
     background-position: center;
     float: left;
+    font-family: boris;
+    color: #fff;
+    line-height: 400px;
+    text-align: center;
+    text-shadow: 0px 0px 5px #000;
+    font-size: 45px;
     border-top-right-radius: 100% 50%;
     border-bottom-right-radius: 100% 50%;
     cursor: pointer;
@@ -1069,25 +1096,10 @@ body{
     -o-filter: grayscale(1);
     -moz-filter: grayscale(1);
     -webkit-filter: grayscale(1);
-    -webkit-filter: grayscale(1);
     filter: grayscale(1);
 }
 .previous:hover{
     background-size: auto 170%;
-}
-.previous:after {
-	right: 90%;
-	top: calc(50% + 40px);
-	border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
-	border-color: rgba(255, 255, 255, 0);
-	border-right-color: #000;
-	border-width: 80px;
-	margin-top: -80px;
 }
 .drawings{
     width: 60%;
@@ -1114,6 +1126,12 @@ body{
     background-size: auto 150%;
     background-position: center;
     float: left;
+    font-family: boris;
+    color: #fff;
+    line-height: 400px;
+    text-align: center;
+    text-shadow: 0px 0px 5px #000;
+    font-size: 45px;
     border-top-left-radius: 100% 50%;
     border-bottom-left-radius: 100% 50%;
     cursor: pointer;
@@ -1126,40 +1144,71 @@ body{
 .next:hover{
     background-size: auto 170%;
 }
-.next:after {
-	left: 90%;
-	top: calc(50% + 40px);
-	border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
-	border-color: rgba(255, 255, 255, 0);
-	border-left-color: #000;
-	border-width: 80px;
-	margin-top: -80px;
+@font-face{
+    font-family: 'arsenale';
+    src: url('../fontes/cheddar jack.ttf') format('truetype');
 }
 .sobre{
     width: 80%;
-    height: 300px;
-    background-color: transparent;
-    color: #000;
+    height: auto;
+    font-size: 72px;
+    background: -webkit-linear-gradient(270deg, #ff0066, #ffff00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #fff;
+    font-family: arsenale;
+    font-size: 3em;
+    line-height: 1em;
     position: relative;
+    padding: 30px;
     left: 10%;
     top: 100px;
+    margin-bottom: 110px;
+    cursor: default;
 }
 .sobre:after{
-    width: 60%;
+    width: 100%;
     height: 60px;
     content: "Quem djabos sou eu?";
-    background-color: #39404A;
+    background-color: #B71C1C;
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, .2) 10%, transparent 10%, transparent 50%, rgba(0, 0, 0, .2) 50%, rgba(0, 0, 0, .2) 80%), linear-gradient(90deg, transparent 20%, rgba(0, 0, 0, .2) 20%, rgba(0, 0, 0, .2) 40%, transparent 40%, transparent 70%, rgba(0, 0, 0, .2) 70%, rgba(0, 0, 0, .2) 90%), linear-gradient(90deg, transparent 10%, rgba(0, 0, 0, .2) 10%, rgba(0, 0, 0, .2) 30%, transparent 30%, transparent 50%, rgba(0, 0, 0, .2) 50%, rgba(0, 0, 0, .2) 80%, transparent 80%);
+    background-size: 30px 30px, 40px 40px, 20px 20px;
+    -webkit-text-fill-color: #fff;
     color: #fff;
     font-size: 50px;
     font-family: sketchy;
+    line-height: 60px;
     position: absolute;
-    left: -10%;
-    top: -50px;
-    padding-left: 15px;
-    border-radius: 5px;
+    left: 0;
+    top: -45px;
+    padding-left: 25px;
+    box-shadow: inset 0px -5px 0px 0px rgba(0, 0, 0, .7);
+}
+.sobre:before{
+    width: 100%;
+    height: 100%;
+    content: " ";
+    background-color: #3A3F49;
+    background-image: radial-gradient(transparent 0%, rgba(0, 0, 0, .9) 100%);
+    -webkit-text-fill-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 15px;
+    z-index: -500;
+}
+.content::-webkit-scrollbar{
+    width: 1em;
+}
+.content::-webkit-scrollbar-track{
+    background-color: #FF3B47;
+}
+.content::-webkit-scrollbar-track-piece:decrement{
+    background-color: #913BFF;
+}
+.content::-webkit-scrollbar-track-piece:increment{
+    background-color: #FF3B47;
+}
+.content::-webkit-scrollbar-thumb{
+    background-image: linear-gradient(#913BFF 40%, #FF3B47 60%);
 }
