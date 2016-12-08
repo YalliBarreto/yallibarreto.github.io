@@ -1170,9 +1170,8 @@ linear-gradient(60deg, #FFA762 25%, transparent 25.5%, transparent 75%, #FFA762 
     width: 100%;
     height: 60px;
     content: "Quem djabos sou eu?";
-    background-color: #B71C1C;
-    background-image: linear-gradient(90deg, rgba(0, 0, 0, .2) 10%, transparent 10%, transparent 50%, rgba(0, 0, 0, .2) 50%, rgba(0, 0, 0, .2) 80%), linear-gradient(90deg, transparent 20%, rgba(0, 0, 0, .2) 20%, rgba(0, 0, 0, .2) 40%, transparent 40%, transparent 70%, rgba(0, 0, 0, .2) 70%, rgba(0, 0, 0, .2) 90%), linear-gradient(90deg, transparent 10%, rgba(0, 0, 0, .2) 10%, rgba(0, 0, 0, .2) 30%, transparent 30%, transparent 50%, rgba(0, 0, 0, .2) 50%, rgba(0, 0, 0, .2) 80%, transparent 80%);
-    background-size: 30px 30px, 40px 40px, 20px 20px;
+    background-color: #3A3F49;
+    background-image: linear-gradient(90deg,  #8E3637 0%, transparent 60%);
     -webkit-text-fill-color: #fff;
     color: #fff;
     font-size: 50px;
@@ -1182,14 +1181,14 @@ linear-gradient(60deg, #FFA762 25%, transparent 25.5%, transparent 75%, #FFA762 
     left: 0;
     top: -45px;
     padding-left: 25px;
-    box-shadow: inset 0px -5px 0px 0px rgba(0, 0, 0, .7);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 .sobre:before{
     width: 100%;
     height: 100%;
     content: " ";
     background-color: #3A3F49;
-    background-image: radial-gradient(transparent 0%, rgba(0, 0, 0, .9) 100%);
     -webkit-text-fill-color: #fff;
     position: absolute;
     left: 0;
@@ -1210,5 +1209,5 @@ linear-gradient(60deg, #FFA762 25%, transparent 25.5%, transparent 75%, #FFA762 
     background-color: #FF3B47;
 }
 .content::-webkit-scrollbar-thumb{
-    background-image: linear-gradient(#913BFF 40%, #FF3B47 60%);
+    background-color: #913BFF;
 }
