@@ -31,6 +31,13 @@
             $(".previous").click(function(){
                 previous();
             });
+            
+            $(".draw").click(function(){
+                $(".zoom").show().css("background-image", $(this).css("background-image"));
+            });
+            $(".zoom").click(function(){
+                $(".zoom").hide();
+            });
         });
         
         function next(){
@@ -125,5 +132,6 @@
             <p>Apaixonado por dark art e surrealismo, recentemente também ganhei gosto por flat design.</p>
         </div>
     </div>
+    <div class="zoom"></div>
 </body>
 </html>
