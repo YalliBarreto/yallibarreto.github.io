@@ -10,6 +10,7 @@
         var maxImg = 24;
         var imgAtual = 1;
         var imgUrl = "url(portfolio/" + imgAtual + ".png)";
+        var imgZoom = false;
         
         $(document).ready(function(){
             
@@ -34,9 +35,11 @@
             
             $(".draw").click(function(){
                 $(".zoom").show().css("background-image", $(this).css("background-image"));
+                imgZoom = true;
             });
             $(".zoom").click(function(){
                 $(".zoom").hide();
+                imgZoom = false;
             });
         });
         
@@ -82,10 +85,10 @@
         
         function update(e){
             var key = String.fromCharCode(e.which);
-            if (key == "%"){
+            if (key == "%" && !imgZoom){
                 previous();
             }
-            if (key == "'"){
+            if (key == "'" && !imgZoom){
                 next();
             }
         }
@@ -119,6 +122,7 @@
         <div class="bracos"></div>
         <div class="maos"></div>
     </div>
+    <div class="name">Emerson Yalli</div>
     <div class="box"></div>
     <div class="content">
         <div class="title">Emerson Yalli</div>
